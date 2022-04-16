@@ -19,8 +19,8 @@
 <body>
     <h1 style="text-align: center;">Método Even Swaps</h1>
     <div id="quantidades"> 
-        <div><label style="padding-left: 20px;" id="1">Digite a Quantidade de Alternativas: </label><input id="Alternativas" style="width:40px"; type="text"></div>
-        <div><label style="padding-left: 20px; margin-right: 16px;" id="2">Digite a Quantidade de Objetivos:</label><input id="Objetivos" style="width:40px"; type="text"></div>
+        <div><label style="padding-left: 20px; margin-right: 4px;" id="1">Digite a Quantidade de Alternativas: </label><input id="Alternativas" style="width:40px"; type="text"></div>
+        <div><label style="padding-left: 20px; margin-right: 20px;" id="2">Digite a Quantidade de Objetivos:</label><input id="Objetivos" style="width:40px"; type="text"></div>
         <button id="ok" style="margin:0 0 20px 20px;" class="btn btn-primary" onclick="DefinirMatriz();">Ok</button>    
     </div>
 
@@ -59,6 +59,11 @@
         <button id="dominancia" style="display:none; margin:0 0 20px 20px;" class="btn btn-primary" onclick="VerificarDominancia();">Verificar Dominância</button>
         <button id="comparar" style="display:none; margin:0 0 20px 20px;" class="btn btn-primary" onclick="Comparar();">Comparar</button>
     </div>
+
+    <footer class="small text-center text-muted">
+        <img src="ila.png" width="50px" style="margin-right:20px" alt="">ILA - Instituto de Logística da Aeronáutica
+        <div>&copy; CESLOG 2021/2022.</div>
+    </footer>
     
     <div style="display: none;" id="var_sobraram"></div>
     <div style="display: none;" id="matriz_final_princ"></div>

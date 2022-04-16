@@ -27,9 +27,9 @@ table{
 }
 
 td{
-    text-align: center;
+    text-align: center !important;
 }
 
 input{
-    text-align: center;
+    text-align: center !important;
 }

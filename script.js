@@ -335,7 +335,7 @@ function Analisado(){
     cont=0
     cont2=0
     for (var i=2;i<colunas.length+1;i++){
-        if (comparacao!=document.getElementById("3matriz1"+i).textContent){
+        if (comparacao!=document.getElementById("3matriz1"+i).value){
             cont=cont+1
         }
     }
@@ -356,7 +356,7 @@ function Analisado(){
         }
     }
 
-    if (cont==0){
+    if (cont!=0){
         alert("O objetivo principal precisa ser igual para todas as alternativas")
     } else if (cont2!=colunas.length){
         alert("Erro de Lógica!")
@@ -391,9 +391,9 @@ function Analisado(){
         document.getElementById("tabelaalteracao").style.display="none"
         document.getElementById("analisado").style.display="none"
         VerificarDominancia()
-    }
-    for (var j=0; j<alt; j++){
-        document.getElementById("2matriz"+princ_s+j).style.backgroundColor="black"
-        document.getElementById("2matriz"+princ_s+j).style.color="white"
+        for (var j=0; j<alt; j++){
+            document.getElementById("2matriz"+princ_s+j).style.backgroundColor="black"
+            document.getElementById("2matriz"+princ_s+j).style.color="white"
+        }
     }
 }

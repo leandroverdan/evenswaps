@@ -230,12 +230,27 @@ function VerificarDominancia(){
         variavel+="</tr>"
     }
     tabelainput.innerHTML+=variavel
-
-    for (var i=1; i<obje; i++){
+    var outrocont
+    console.log(Ndominadas)
+    for (var i=1; i<obj; i++){
         newcont=0
-        for (var j=1; j<alte; j++){
-            if (document.getElementById("2matriz"+i+"1").textContent!=document.getElementById("2matriz"+i+j).textContent){
-                newcont=newcont+1
+        for (var j=1; j<alt; j++){
+            outrocont=0
+            for (var h=0; h<Ndominadas.length; h++){
+                if (Ndominadas[h]===j){
+                    outrocont=outrocont+1
+                }
+                if (outrocont!=0){
+                    if (Ndominadas[0]==""){
+                        if (document.getElementById("2matriz"+i+"1").textContent!=document.getElementById("2matriz"+i+j).textContent){
+                            newcont=newcont+1
+                        }
+                    }else{
+                        if (document.getElementById("2matriz"+i+Ndominadas[0]).textContent!=document.getElementById("2matriz"+i+j).textContent){
+                            newcont=newcont+1
+                        }
+                    }
+                }
             }
         }
         if (newcont==0){

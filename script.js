@@ -60,6 +60,7 @@ function VerificarDominancia(){
     var cont
     var iguais
     var dominadas=[]
+    var newcont
     for (k=1; k<alt; k++){
         for (j=1; j<alt; j++){
             cont=0
@@ -229,6 +230,21 @@ function VerificarDominancia(){
         variavel+="</tr>"
     }
     tabelainput.innerHTML+=variavel
+
+    for (var i=1; i<obje; i++){
+        newcont=0
+        for (var j=1; j<alte; j++){
+            if (document.getElementById("2matriz"+i+"1").textContent!=document.getElementById("2matriz"+i+j).textContent){
+                newcont=newcont+1
+            }
+        }
+        if (newcont==0){
+            for (var k=0; k<alt+1; k++){
+                document.getElementById("2matriz"+i+k).style.backgroundColor="black"
+                document.getElementById("2matriz"+i+k).style.color="white"
+            }
+        }
+    }
 
 }
 
